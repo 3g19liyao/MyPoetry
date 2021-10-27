@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F5F5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".space.SpaceFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/poetBack"
+        android:layout_width="300dp"
+        android:layout_height="380dp"
+        android:layout_marginTop="136dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/poet"
+            android:layout_width="249dp"
+            android:layout_height="172dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="85dp"
+            android:background="@drawable/mine_back"
+            android:gravity="center"
+            android:textIsSelectable="true"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.349" />
+
+        <TextView
+            android:id="@+id/information"
+            android:layout_width="158dp"
+            android:layout_height="33dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="23dp"
+            android:text="西安          晴" />
+
+        <TextView
+            android:id="@+id/poetPeople"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="80dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/poetName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="40dp"
+            android:text="TextView" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/nolike" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/getPoet"
+        android:layout_width="143dp"
+        android:layout_height="50dp"
+        android:text="换一句"
+        android:background="@drawable/but_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poetBack"
+        app:layout_constraintVertical_bias="0.325" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

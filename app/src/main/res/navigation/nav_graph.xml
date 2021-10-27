@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_space">
+
+    <fragment
+        android:id="@+id/navigation_space"
+        android:name="com.example.mypoetry.space.SpaceFragment"
+        android:label="@string/spaceTitle"
+        tools:layout="@layout/fragment_space"/>
+
+    <fragment
+        android:id="@+id/navigation_mine"
+        android:name="com.example.mypoetry.mine.MineFragment"
+        android:label="@string/mineTitle"
+        tools:layout="@layout/fragment_mine" >
+        <action
+            android:id="@+id/action_navigation_mine_to_mineLikeFragment"
+            app:destination="@id/mineLikeFragment" />
+        <action
+            android:id="@+id/action_navigation_mine_to_personalFragment"
+            app:destination="@id/personalFragment" />
+        <action
+            android:id="@+id/action_navigation_mine_to_changeFragment"
+            app:destination="@id/changeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_other"
+        android:name="com.example.mypoetry.other.OtherFragment"
+        android:label="@string/otherTitle"
+        tools:layout="@layout/fragment_other"/>
+    <fragment
+        android:id="@+id/mineLikeFragment"
+        android:name="com.example.mypoetry.mine.MineLikeFragment"
+        android:label="MineLikeFragment"
+        tools:layout="@layout/minelike_fragment">
+        <action
+            android:id="@+id/action_mineLikeFragment_to_navigation_mine"
+            app:destination="@id/navigation_mine" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/personalFragment"
+        android:name="com.example.mypoetry.mine.PersonalFragment"
+        android:label="PersonalFragment"
+        tools:layout="@layout/fragment_personal"/>
+    <fragment
+        android:id="@+id/changeFragment"
+        android:name="com.example.mypoetry.mine.ChangeFragment"
+        android:label="ChangeFragment"
+        tools:layout="@layout/fragment_change"/>
+</navigation>

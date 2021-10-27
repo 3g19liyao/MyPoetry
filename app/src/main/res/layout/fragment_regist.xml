@@ -1,0 +1,64 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditText
+        android:id="@+id/telePhone"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="24dp"
+        android:autofillHints="telephone"
+        android:hint="telephone"
+        android:inputType="textEmailAddress"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/code"
+        android:layout_width="208dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="28dp"
+        android:autofillHints="VerificationCode"
+        android:hint="VerificationCode"
+        android:imeActionLabel="@string/action_sign_in_short"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:selectAllOnFocus="true"
+        app:layout_constraintStart_toStartOf="@+id/telePhone"
+        app:layout_constraintTop_toBottomOf="@+id/telePhone" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="121dp"
+        android:layout_height="48dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="304dp"
+        android:background="@drawable/but_back"
+        android:onClick="@{v->view.onClick()}"
+        android:text="注册"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.145" />
+
+    <com.example.mypoetry.Model.VerificationCodeTextView
+        android:id="@+id/getMes"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        app:layout_constraintEnd_toEndOf="@+id/telePhone"
+        app:layout_constraintTop_toTopOf="@+id/code"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
